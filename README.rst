@@ -1,18 +1,16 @@
 Demo FullStack JS Básico
 ==============
 
-//Instrucciones en Español
-//Código para pruebas...
-//falta crear proceso de build (Gulp etc..)...
-//Terminal MacOS (debe funcionar para windows)
+- Código para pruebas...
+- Falta crear proceso de build (Gulp etc..)...
+- Terminal MacOS (debe funcionar para windows)
 
 
--Debes tener node.js instalado
--Debes de crear una cuenta en mongoDB Atlas
--Crea una base de datos con una colección vacía en Atlas UI, dale el nombre “sample_collections".
--Crea un usuario para esta base de datos con SRV string desde Atlas
-
-- Navega hacia el Directorio del proyecto en una consola Terminal y ejecuta:
+1) Debes tener node.js instalado.
+2) Debes de crear una cuenta en mongoDB Atlas.
+3) Crea una base de datos con una colección vacía en Atlas UI, dale el nombre “sample_collections".
+4) Crea un usuario para esta base de datos con SRV string desde Atlas.
+5) Navega hacia el Directorio del proyecto en una consola Terminal y ejecuta:
 
 $npm i
 
