@@ -32,10 +32,6 @@ después ejecuta el archivo desde Terminal(Esto insertará la colección phoenic
 
    - Esto iniciara la app.
 
->Nota: Usa el siguiente comando desde Terminal si tienes el error "header in use"::
-
-   $sudo kill $(lsof -ti:3000)
-
 Colección del alfabeto fenicio.
 -----------------
 Fullstack JS Demo.
@@ -85,6 +81,9 @@ http://localhost:3000/alpha
 http://localhost:3000/votingpool
 ===============
 
+>Nota: Usa el siguiente comando desde Terminal si tienes el error "header in use"::
+
+   $sudo kill $(lsof -ti:3000)
 
 > Tags: JavaScript, Código, Educación, Hobby.
 
@@ -125,9 +124,6 @@ then run the file in Terminal as follows::
 
    $npm start 
 
-> Note:Use this command to kill the port if you're getting an error related to "header in use"::
-
- $sudo kill $(lsof -ti:3000)
 
 Phoenician alphabet collection.
 -----------------
@@ -144,11 +140,6 @@ This site helps users to vote on their preferred Phoenician Symbol,
 Once a vote is performed by a user, the results are being displayed
 into a graphic dashboard.
 
-CRUD operations.
-
-When this page is ready, 2 Read operations have already been performed at the database level. The routes "./alpha" and "./votingpool" are called asynchronously, a Read operation is being executed in both routes, the app makes a GET request for
-the alphabet data and the number of votes. In the web page canvas, the data of the alphabet and the graph are inserted with the HTML / JS API. 
-
 Visitors to the website can vote by "tapping / clicking" on some symbol, this "tapping / clicking" event processes 1 Write operation at the database level.
 
 Technologies:
@@ -162,6 +153,7 @@ Technologies:
 Phoenicean Alphabet.
 
 > Two Read Ops: All Docs, Top 5.
+
 > One Write operation: Doc by meaning (ID)
 
 ===== =========
@@ -175,6 +167,10 @@ http://localhost:3000/alpha
 ---------------
 http://localhost:3000/votingpool
 ===============
+
+> Note:Use this command to kill the port if you're getting an error related to "header in use"::
+
+ $sudo kill $(lsof -ti:3000)
 
 > Tags: JavaScript, Code, Education, Hobby.
 
