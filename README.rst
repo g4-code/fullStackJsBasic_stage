@@ -114,14 +114,12 @@ then run the file in Terminal as follows::
 
 7) Update the env. file with your Atlas credentials::
 
-MONGO_DB_URI = your URI+srv with user and password 
-MDB_NS = test_collections
+   MONGO_DB_URI = your URI+srv with user and password ::
+   MDB_NS = test_collections
 
 8) Open a terminal into the project folder, then run:
 
-$npm start 
-or 
-$node ./index.js
+   $npm start 
 
 > Note:Use this command to kill the port if you're getting an error related to "header in use"::
 
