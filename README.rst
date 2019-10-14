@@ -14,14 +14,14 @@ Demo FullStack JS Básico
 
    $npm i
 
- - Esto instala las dependencias, jsonlock incluido para no tener problemas de versiones.
+   - Esto instala las dependencias, jsonlock incluido para no tener problemas de versiones.
 
 6) Abre el archivo bulkInsert.js, reemplaza el valor de la variable “host” con tu SRV query string,
 después ejecuta el archivo desde Terminal::
 
    $node bulkInsert.js
 
- - Esto insertara la colección "phoenician alphabet" en mongoDB Atlas.
+   - Esto insertara la colección "phoenician alphabet" en mongoDB Atlas.
 
 7) Actualiza las variables de entorno en el archivo .env ::
 
@@ -48,13 +48,13 @@ Fullstack JS Demo.
 - Se uso Semantic UI para estilos CSS
 - Las operaciones Read y Write están conectadas en el mapa de rutas (Falta implementar DAO)
 
-> Este sitio web ayuda a los usuarios a votar en su símbolo fenicio favorito, 
+Este sitio web ayuda a los usuarios a votar en su símbolo fenicio favorito, 
 Una vez que un voto fue emitido por un usuario, los resultados se muestran en 
 en una grafica tipo Pie Chart.
 
 Operaciones CRUD.
    
-> Cuando esta página esta lista, ya se han realizado 2 operaciones Read a nivel 
+Cuando esta página esta lista, ya se han realizado 2 operaciones Read a nivel 
 base de datos. Se llama de forma asíncrona a las rutas "./alpha" y "./votingpool", 
 en ambas hay una operación Read, donde se solicitan los datos del alfabeto y 
 el numero de votos. En el canvas de la pagina web se insertan los datos del alfabeto 
@@ -72,8 +72,8 @@ Tecnologías:
 
 Phoenicean Alphabet.
 
-- (2) operaciones Read: All Docs, Top 5
-- (1) operación write: Doc by meaning (ID)
+- Dos operaciones Read: All Docs, Top 5
+- Una operación write: Doc by meaning (ID)
 
 Mapa de rutas / Link
 
