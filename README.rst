@@ -140,19 +140,16 @@ JS Fullstack Demo.
 - Read and write CRUD operations wired (No DAO)
 - MongoDB Atlas Document Database
 
-> This site helps users to vote on their preferred Phoenician Symbol,
+This site helps users to vote on their preferred Phoenician Symbol,
 Once a vote is performed by a user, the results are being displayed
 into a graphic dashboard.
 
 CRUD operations.
 
-> When this page is ready, 2 Read operations have already been performed at the
- database level. The routes "./alpha" and "./votingpool" are called asynchronously,
-a Read operation is being executed in both routes, the app makes a GET request for
-the alphabet data and the number of votes. In the web page canvas, the data of 
-the alphabet and the graph are inserted with the HTML / JS API. 
-Visitors to the website can vote by "tapping / clicking" on some symbol, 
-this "tapping / clicking" event processes 1 Write operation at the database level.
+When this page is ready, 2 Read operations have already been performed at the database level. The routes "./alpha" and "./votingpool" are called asynchronously, a Read operation is being executed in both routes, the app makes a GET request for
+the alphabet data and the number of votes. In the web page canvas, the data of the alphabet and the graph are inserted with the HTML / JS API. 
+
+Visitors to the website can vote by "tapping / clicking" on some symbol, this "tapping / clicking" event processes 1 Write operation at the database level.
 
 Technologies:
 
@@ -164,18 +161,24 @@ Technologies:
 
 Phoenicean Alphabet.
 
-> (2) Read Ops: All Docs, Top 5.
-> (1) Write operation: Doc by meaning (ID)
+> Two Read Ops: All Docs, Top 5.
+> One Write operation: Doc by meaning (ID)
 
-Route Map / Link
-
-- http://localhost:3000/
-- http://localhost:3000/secret
-- http://localhost:3000/alpha.json
-- http://localhost:3000/top5.json
+===== =========
+Route Map
+---------------
+http://localhost:3000/
+---------------
+http://localhost:3000/secret
+---------------
+http://localhost:3000/alpha
+---------------
+http://localhost:3000/votingpool
+===============
 
 > Tags: JavaScript, Code, Education, Hobby.
-> Design : Marco Galicia
+
+Design : Marco Galicia (g.4)
 
 > Let me know if you have any question
 
