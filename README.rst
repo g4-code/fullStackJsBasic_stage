@@ -16,19 +16,19 @@ $npm i
 
 Esto instala las dependencias. (jsonlock incluido para no tener problemas de versiones)
 
--Abre el archivo bulkInsert.js, reemplaza el valor de la variable “host” con tu SRV query string,
+6) Abre el archivo bulkInsert.js, reemplaza el valor de la variable “host” con tu SRV query string,
 después ejecuta el archivo desde Terminal:
 
 $node bulkInsert.js
 
 Esto insertara la colección "phoenician alphabet" en mongoDB Atlas.
 
--Actualiza las variables de entorno en el archivo .env:
+7) Actualiza las variables de entorno en el archivo .env:
 
 MONGO_DB_URI = el URI+srv con tu usuario y tu password 
 MDB_NS = test_collections
 
-- Dentro del directorio del proyecto, desde terminal ejecuta:
+8) Dentro del directorio del proyecto, desde terminal ejecuta:
 
 $npm start 
 o
@@ -36,25 +36,25 @@ $node ./index.js
 
 Esto iniciara la app.
 
-- Usa el siguiente comando desde Terminal si tienes el error "header in use":
+Nota: Usa el siguiente comando desde Terminal si tienes el error "header in use":
 
 $sudo kill $(lsof -ti:3000)
 
 Colección del alfabeto fenicio.
 Fullstack JS Demo.
 
--Se configuraron web workers para cargar datos desde el servidor backend.
--El front End se construyo con HTML DOM API y JS
--Se uso expressjs como servidor Web
--Se uso Semantic UI para estilos CSS
--Las operaciones Read y Write están conectadas en el mapa de rutas (Falta implementar DAO)
+- Se configuraron web workers para cargar datos desde el servidor backend.
+- El front End se construyo con HTML DOM API y JS
+- Se uso expressjs como servidor Web
+- Se uso Semantic UI para estilos CSS
+- Las operaciones Read y Write están conectadas en el mapa de rutas (Falta implementar DAO)
 
-Este sitio web ayuda a los usuarios a votar en su símbolo fenicio favorito, 
+> Este sitio web ayuda a los usuarios a votar en su símbolo fenicio favorito, 
 Una vez que un voto fue emitido por un usuario, los resultados se muestran en 
 en una grafica tipo Pie Chart.
 
-Operaciones CRUD.
-Cuando esta página esta lista, ya se han realizado 2 operaciones Read a nivel 
+> Operaciones CRUD.
+> Cuando esta página esta lista, ya se han realizado 2 operaciones Read a nivel 
 base de datos. Se llama de forma asíncrona a las rutas "./alpha" y "./votingpool", 
 en ambas hay una operación Read, donde se solicitan los datos del alfabeto y 
 el numero de votos. En el canvas de la pagina web se insertan los datos del alfabeto 
@@ -64,16 +64,16 @@ operación Write a nivel base de datos.
 
 Tecnologías:
 
--node.js
--ExpressJS
--HTML DOM API
--Semantic UI
--MongoDB Atlas
+- node.js
+- ExpressJS
+- HTML DOM API
+- Semantic UI
+- MongoDB Atlas
 
 Phoenicean Alphabet
-2 operaciones Read: All Docs, Top 5
-1 operación write: Doc by meaning (ID)
-.
+- 2 operaciones Read: All Docs, Top 5
+- 1 operación write: Doc by meaning (ID)
+
 Mapa de rutas / Link
 
 http://localhost:3000/
@@ -81,10 +81,10 @@ http://localhost:3000/secret
 http://localhost:3000/alpha.json
 http://localhost:3000/top5.json
 
-Tags: JavaScript, Código, Educación, Hobby ...
-Diseño : Marco Galicia
+> Tags: JavaScript, Código, Educación, Hobby ...
+> Diseño : Marco Galicia
 
-**puedes contactarme si tienes alguna pregunta...
+Puedes contactarme si tienes alguna pregunta...
 ////////////////////////////////////////////////////////////////////////////////
 //English Set Up
 //dev code only (TODO: Build process)
