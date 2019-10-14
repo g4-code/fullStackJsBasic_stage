@@ -16,7 +16,7 @@ Demo FullStack JS Básico
 
    - Esto instala las dependencias, jsonlock incluido para no tener problemas de versiones.
 
-6) Abre el archivo bulkInsert.js, reemplaza el valor de la variable “host” con tu SRV query string,
+6. Abre el archivo bulkInsert.js, reemplaza el valor de la variable “host” con tu SRV query string,
 después ejecuta el archivo desde Terminal::
 
    $node bulkInsert.js
