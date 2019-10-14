@@ -108,7 +108,7 @@ Basic Demo FullStack JS
 
    - This will install dependencies. jsonlock file included
 
-6) Open buklInsert.js, replace the hots variable with your SRV query string,
+6. Open buklInsert.js, replace the hots variable with your SRV query string,
 then run the file in Terminal as follows::
 
    $node bulkInsert.js
