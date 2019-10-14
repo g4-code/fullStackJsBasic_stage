@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <title>JavaScript Fullstack Demo Básico</title>
+    </head>
+    <!-- Sem UI CDN 2019-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/></link>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+    <!--Google chart: Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!--local SPA scripts-->
+    <link rel="stylesheet" href="css/index.css"/>
+    <script type="text/JavaScript" src="./js/votinggraph.js"></script>
+
+    <!-- ****************************************** -->    
+    <body class="ui active inverted placeholder">
+        <h1 class="ui block header">
+        <a class="ui blue ribbon label">SPA Demo:</a>
+        JS Full Stack Básico
+        </h1>
+
+        <div class="ui segment">
+            <a class="ui green ribbon label">Alfabeto Feniceo:</a>
+            <span>Da click en tu símbolo preferido</span>
+            <br>
+            <br>
+            <div id="alphaContainer_symbol"></div>
+            <h4>Top 5: Símbolos Preferidos</h4>
+            <!--Div that will hold the pie chart-->
+            <div id="chart_div"></div>
+            <!-- <div id="alphaContainer_list">Graph</div> -->
+            <div>
+        
+            </div>
+        </div>
+        <div class="ui segment"> 
+            <a class="ui red ribbon label">Descripción:</a>
+            <div>Operaciones CRUD.</div>
+            
+            <div>Este sitio web ofrece a los usuarios una forma de votar en su símbolo feniceo favorito.</div> 
+            <div>Una vez que un voto fue emitido por el usuario, los resultados se muestran en
+            en una gráfica tipo Pie Chart. </div>
+            </p>
+            <ul style="list-style-type:disc;">
+                <li><a href="https://nodejs.org/en/">Node.js como RTE</a></li>
+                <li><a href="https://www.mongodb.com/">MongoDB como Base de Datos</a></li>
+                <li><a href="https://expressjs.com/">ExpressJS como servidor HTTP/FTP</a></li>
+                <li><a href="https://www.w3schools.com/html/default.asp">HTML DOM API</a></li>
+                <li><a href="https://developers.google.com/chart">Google Charts</a></li>
+            <!--<li>ReactJS : Front End Framework</li>-->
+                <li><a href="https://semantic-ui.com/">Semantic UI : CSS Framework</a></li>
+            </ul><!-- El The: Este this ... ingles -->
+            <div>Arquitecturas mas complejas en <a hfer="https://university.mongodb.com/">mongoDB University</a></div>
+        
+        </div>
+        <div class="ui segment"> 
+            <a class="ui yellow ribbon label">Detalles:</a>
+            <ul style="list-style-type:disc;">
+                <li><a hfer="https://es.wikipedia.org/wiki/Idioma_fenicio">Wiki</a></li>
+                <li><a href="https://www.quora.com/What-is-the-evolutionary-history-of-English-letters">Evolución del Alfabeto</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Astarté">𐤀‏𐤔‏𐤕‏𐤓‏𐤕‏</a></li>
+                <li><a href="http://www.pbmnh.org/phoenician-ship-marble-mosaic-tile-stones-art-wall-mural/">Arte Feniceo</a></li>
+                <li>Tags: Código, JavaScript, Cultura, Educación, Pasatiempo ...</li>
+                <li>Diseñado por Marco Galicia</li>
+            </ul>
+        </div>
+
+        <div class="ui segment"> 
+            <a class="ui purple ribbon label">Mapa de Rutas:</a>
+            <ul style="list-style-type:disc;">
+                <li>secret</li>
+                <li>count</li>
+                <li>alpha</li>
+                <li>votingpool</li>
+            </ul>
+        </div>
+        
+    </div>
+    
+ </body>
+     <script type="text/JavaScript">
+     //TODO implementar SPA 
+        console.log("App starting...hOLA")
+        let alpha_WW;
+        let chart_WW;
+
+        if (typeof(alpha_WW) == "undefined") {
+            alpha_WW = new Worker("./js/alphaWW.js");
+        }
+
+        alpha_WW.onmessage = function(event){
+    
+            let responseFromWW =  event.data;
+            let alphaJSON = JSON.parse(responseFromWW);
+            let inspeccionObjeto = alphaJSON.res;
+            let arrayObjectLength = inspeccionObjeto.length; 
+            let parentContainerLabels = document.getElementById("alphaContainer_symbol");
+            for (let j = 0; j < arrayObjectLength; j++) {
+            
+                    let symbol = inspeccionObjeto[j].symbol;
+                    let meaning = inspeccionObjeto[j].meaning;
+                    createDomLabel(symbol, meaning, j, parentContainerLabels);
+                    //console.log(inspeccionObjeto[j]);
+                    
+            }
+
+            alpha_WW.terminate();
+            alpha_WW = undefined;
+        };
+        
+        //create any label at
+        function createDomLabel(symbolValue, meaningValue, index, parent){
+           
+            let newLabel = document.createElement('label');
+            newLabel.textContent = symbolValue;
+            newLabel.className = "ui label";
+            newLabel.value = symbolValue;
+            newLabel.title = meaningValue;
+            parent.insertChildAtIndex(newLabel, index);
+            newLabel.addEventListener("click", () => {
+                voteFavoriteSymbol(meaningValue);
+            });
+            newLabel.addEventListener("mouseover", () => {
+                userIsOnSymbol(newLabel);
+            });
+            newLabel.addEventListener("mouseout", () => {
+                userIsNotOnSymbol(newLabel);
+            });
+        }
+        //https://stackoverflow.com/questions/5882768/how-to-append-a-childnode-to-a-specific-position
+        Element.prototype.insertChildAtIndex = function(child, index) {
+            if (!index) index = 0
+            if (index >= this.children.length) {
+                this.appendChild(child)
+            } else {
+                this.insertBefore(child, this.children[index])
+            }
+        }
+        //get element by value: operacion Write CR(U)D
+        function voteFavoriteSymbol(meaningValue){
+            //alert("migrate write op: " + meaningValue);
+            let clickedValue = meaningValue
+            if (confirm("Significado: " + meaningValue)) {
+                 //new backend event: web worker ls rehuse
+                 writeFunctionJs(clickedValue);
+            } else {
+                txt = "You pressed Cancel!";
+            }
+        }
+        function userIsOnSymbol(newLabel){
+            newLabel.className = "ui purple label";
+        }
+        function userIsNotOnSymbol(newLabel){
+            newLabel.className = "ui label";
+        }
+        // w= 0; reuse web worker canvas example
+        function writeFunctionJs(clickedValue) { 
+            //classic
+            var request = new XMLHttpRequest();
+            request.open('PUT', '/vote/' + clickedValue, true);
+            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+            request.send(clickedValue);
+            //reload chart after voting
+            try{
+                reloadWWChart();
+            }catch(e){
+                console.log("Error al recargar grafica:_" + e)
+            }
+        }
+        //web worker votepool
+        function reloadWWChart(){
+             if (typeof(chart_WWr) == "undefined") {
+                chart_WWr = new Worker("./js/chartWW.js");
+            }
+
+            chart_WWr.onmessage = function(event01){
+                
+                let responseFromWW01 =  event01.data;
+                let votingpoolJSON = JSON.parse(responseFromWW01);
+                //console.log("Despues de JSON.parse(event.data):_" + votingpoolJSON )
+                dibujaChart(votingpoolJSON);
+
+                chart_WWr.terminate();
+                chart_WWr = undefined; 
+            };
+        }
+        //first load
+        reloadWWChart()
+    </script>
+</html>
