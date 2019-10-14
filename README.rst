@@ -14,7 +14,7 @@ Demo FullStack JS Básico
 
 $npm i
 
-Esto instala las dependencias. (jsonlock incluido para no tener problemas de versiones)
+Esto instala las dependencias, jsonlock incluido para no tener problemas de versiones.
 
 6) Abre el archivo bulkInsert.js, reemplaza el valor de la variable “host” con tu SRV query string,
 después ejecuta el archivo desde Terminal:
@@ -41,6 +41,7 @@ Nota: Usa el siguiente comando desde Terminal si tienes el error "header in use"
 $sudo kill $(lsof -ti:3000)
 
 Colección del alfabeto fenicio.
+-----------------
 Fullstack JS Demo.
 
 - Se configuraron web workers para cargar datos desde el servidor backend.
@@ -84,7 +85,7 @@ http://localhost:3000/top5.json
 > Tags: JavaScript, Código, Educación, Hobby ...
 > Diseño : Marco Galicia
 
-Puedes contactarme si tienes alguna pregunta...
+Puedes contactarme si tienes alguna pregunta.
 ////////////////////////////////////////////////////////////////////////////////
 //English Set Up
 //dev code only (TODO: Build process)
