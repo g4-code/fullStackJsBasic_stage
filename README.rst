@@ -17,11 +17,9 @@ Demo FullStack JS Básico
    - Esto instala las dependencias, jsonlock incluido para no tener problemas de versiones.
 
 6. Abre el archivo bulkInsert.js, reemplaza el valor de la variable “host” con tu SRV query string,
-después ejecuta el archivo desde Terminal::
+después ejecuta el archivo desde Terminal(Esto insertará la colección phoenician alphabet en mongoDB Atlas) ::
 
    $node bulkInsert.js
-
-   - Esto insertara la colección phoenician alphabet en mongoDB Atlas.
 
 7) Actualiza las variables de entorno en el archivo .env::
 
@@ -89,7 +87,8 @@ http://localhost:3000/votingpool
 
 
 > Tags: JavaScript, Código, Educación, Hobby.
-> Diseño : Marco Galicia
+
+Diseño : Marco Galicia (g.4)
 
 Puedes contactarme si tienes alguna duda sobre el código.
 
