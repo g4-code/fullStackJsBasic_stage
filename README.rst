@@ -82,9 +82,9 @@ http://localhost:3000/
 ---------------
 http://localhost:3000/secret
 ---------------
-http://localhost:3000/alpha.json
+http://localhost:3000/alpha
 ---------------
-http://localhost:3000/top5.json
+http://localhost:3000/votingpool
 ===============
 
 
