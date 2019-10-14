@@ -21,14 +21,14 @@ después ejecuta el archivo desde Terminal::
 
    $node bulkInsert.js
 
-   - Esto insertara la colección "phoenician alphabet" en mongoDB Atlas.
+   - Esto insertara la colección 'phoenician alphabet' en mongoDB Atlas.
 
-7) Actualiza las variables de entorno en el archivo .env ::
+7) Actualiza las variables de entorno en el archivo .env::
 
    MONGO_DB_URI = el URI+srv con tu usuario y tu password 
    MDB_NS = test_collections
 
-8) Dentro del directorio del proyecto, desde terminal ejecuta ::
+8) Dentro del directorio del proyecto, desde terminal ejecuta::
 
    $npm start 
 
@@ -81,6 +81,17 @@ Mapa de rutas / Link
 - http://localhost:3000/secret
 - http://localhost:3000/alpha.json
 - http://localhost:3000/top5.json
+
+===== ========= =====
+Table Headings  Here
+--------------- -----
+Sub   Headings  Too
+===== ========= =====
+column spanning no
+--------------- -----
+cell  cell      row
+column spanning spans
+=============== =====
 
 
 > Tags: JavaScript, Código, Educación, Hobby.
