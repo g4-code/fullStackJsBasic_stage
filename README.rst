@@ -10,11 +10,11 @@ Demo FullStack JS Básico
 2) Debes de crear una cuenta en mongoDB Atlas.
 3) Crea una base de datos con una colección vacía en Atlas UI, dale el nombre “sample_collections".
 4) Crea un usuario para esta base de datos con SRV string desde Atlas.
-5) Navega hacia el Directorio del proyecto en una consola Terminal y ejecuta:
+5) Navega hacia el Directorio del proyecto en una consola Terminal y ejecuta::
 
-$npm i
+   $npm i
 
-Esto instala las dependencias, jsonlock incluido para no tener problemas de versiones.
+ - Esto instala las dependencias, jsonlock incluido para no tener problemas de versiones.
 
 6) Abre el archivo bulkInsert.js, reemplaza el valor de la variable “host” con tu SRV query string,
 después ejecuta el archivo desde Terminal:
