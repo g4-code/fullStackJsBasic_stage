@@ -19,24 +19,24 @@ Demo FullStack JS Básico
 6. Abre el archivo bulkInsert.js, reemplaza el valor de la variable “host” con tu SRV query string,
 después ejecuta el archivo desde Terminal::
 
-$node bulkInsert.js
+   $node bulkInsert.js
 
  - Esto insertara la colección "phoenician alphabet" en mongoDB Atlas.
 
 7) Actualiza las variables de entorno en el archivo .env ::
 
-MONGO_DB_URI = el URI+srv con tu usuario y tu password 
-MDB_NS = test_collections
+   MONGO_DB_URI = el URI+srv con tu usuario y tu password 
+   MDB_NS = test_collections
 
 8) Dentro del directorio del proyecto, desde terminal ejecuta ::
 
-$npm start 
+   $npm start 
 
    - Esto iniciara la app.
 
 >Nota: Usa el siguiente comando desde Terminal si tienes el error "header in use"::
 
-$sudo kill $(lsof -ti:3000)
+   $sudo kill $(lsof -ti:3000)
 
 Colección del alfabeto fenicio.
 -----------------
@@ -70,9 +70,10 @@ Tecnologías:
 - Semantic UI
 - MongoDB Atlas
 
-Phoenicean Alphabet
-- 2 operaciones Read: All Docs, Top 5
-- 1 operación write: Doc by meaning (ID)
+Phoenicean Alphabet.
+
+- (2) operaciones Read: All Docs, Top 5
+- (1) operación write: Doc by meaning (ID)
 
 Mapa de rutas / Link
 
@@ -81,10 +82,25 @@ http://localhost:3000/secret
 http://localhost:3000/alpha.json
 http://localhost:3000/top5.json
 
-> Tags: JavaScript, Código, Educación, Hobby ...
++-------+
+| Mapa de rutas
++-------+
+| http://localhost:3000/   |
++-------+
+| http://localhost:3000/secret   |
++-------+
+| http://localhost:3000/alpha.json   |
++-------+
+| http://localhost:3000/top5.json   |
++-------+
+
+
+
+> Tags: JavaScript, Código, Educación, Hobby.
 > Diseño : Marco Galicia
 
-Puedes contactarme si tienes alguna pregunta.
+aaa
+
 ////////////////////////////////////////////////////////////////////////////////
 //English Set Up
 //dev code only (TODO: Build process)
