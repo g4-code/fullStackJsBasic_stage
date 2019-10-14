@@ -21,7 +21,7 @@ después ejecuta el archivo desde Terminal::
 
    $node bulkInsert.js
 
-   - Esto insertara la colección 'phoenician alphabet' en mongoDB Atlas.
+   - Esto insertara la colección phoenician alphabet en mongoDB Atlas.
 
 7) Actualiza las variables de entorno en el archivo .env::
 
@@ -75,13 +75,6 @@ Phoenicean Alphabet.
 - Dos operaciones Read: All Docs, Top 5
 - Una operación write: Doc by meaning (ID)
 
-Mapa de rutas / Link
-
-- http://localhost:3000/
-- http://localhost:3000/secret
-- http://localhost:3000/alpha.json
-- http://localhost:3000/top5.json
-
 ===== =========
 Mapa de rutas
 ---------------
@@ -98,7 +91,7 @@ http://localhost:3000/top5.json
 > Tags: JavaScript, Código, Educación, Hobby.
 > Diseño : Marco Galicia
 
->Puedes contactarme si tienes alguna duda.
+Puedes contactarme si tienes alguna duda sobre el código.
 
 ////////////////////////////////////////////////////////////////////////////////
 
