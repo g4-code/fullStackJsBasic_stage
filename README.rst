@@ -86,7 +86,7 @@ Mapa de rutas / Link
 > Tags: JavaScript, Código, Educación, Hobby.
 > Diseño : Marco Galicia
 
-aaa
+>Puedes contactarme si tienes alguna duda.
 
 ////////////////////////////////////////////////////////////////////////////////
 //English Set Up
